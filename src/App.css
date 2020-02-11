@@ -1,0 +1,23 @@
+#header {
+  background-color: black;
+}
+
+#header h1 {
+  color: grey;
+}
+
+#search {
+  padding: 10px;
+}
+
+#movieRow {
+  padding: 10px;
+}
+
+#movieRow h3 {
+  padding: 0;
+}
+
+.text-overlow {
+  overflow: hidden;
+}
