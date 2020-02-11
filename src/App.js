@@ -56,7 +56,7 @@ class App extends Component {
             <Image src="https://via.placeholder.com/100"></Image>
           </Col>
           <Col xs={8}>
-            <h1>Movie </h1>
+            <h1>Movie Search</h1>
           </Col>
         </Row>
         <Row id="search">
