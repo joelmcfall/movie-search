@@ -3,7 +3,7 @@ import axios from "axios";
 
 import "./App.css";
 
-import { Row, Col, Image, Form, FormControl, Helmet } from "react-bootstrap";
+import { Row, Col, Image, Form, FormControl } from "react-bootstrap";
 
 import MovieRow from "./components/movieRow";
 
@@ -51,15 +51,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Helmet>
-          <title>Movie</title>
-        </Helmet>
         <Row id="header" className="align-items-center">
           <Col className="no-padding" xs="auto">
             <Image src="https://via.placeholder.com/100"></Image>
           </Col>
           <Col xs={8}>
-            <h1>Movie Searcher</h1>
+            <h1>Movie </h1>
           </Col>
         </Row>
         <Row id="search">
