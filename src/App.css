@@ -3,7 +3,11 @@
 }
 
 #header h1 {
-  color: grey;
+  color: #01d277;
+}
+
+#logo {
+  padding: 5px;
 }
 
 #search {
@@ -20,4 +24,15 @@
 
 .text-overlow {
   overflow: hidden;
+}
+
+.standard-btn {
+  background-color: #01d277 !important;
+  border-color: #01d277 !important;
+}
+
+.standard-btn:hover {
+  background-color: white !important;
+  color: #01d277 !important;
+  cursor: pointer;
 }

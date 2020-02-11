@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 
-import { Row, Container, Col, Image } from "react-bootstrap";
+import { Row, Container, Col, Image, Button } from "react-bootstrap";
 
 class MovieRow extends Component {
+  showMovie() {
+    window.location.href =
+      "https://www.themoviedb.org/movie/" + this.props.movie.id;
+  }
+
   render() {
     return (
       <Container id="movieRow">
@@ -19,6 +24,12 @@ class MovieRow extends Component {
           <Col>
             <h3>{this.props.movie.title}</h3>
             <p className="text-overflow"> {this.props.movie.overview}</p>
+            <Button
+              className="standard-btn"
+              onClick={this.showMovie.bind(this)}
+            >
+              View
+            </Button>
           </Col>
         </Row>
       </Container>

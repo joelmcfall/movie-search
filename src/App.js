@@ -6,6 +6,7 @@ import "./App.css";
 import { Row, Col, Image, Form, FormControl } from "react-bootstrap";
 
 import MovieRow from "./components/movieRow";
+import logo from "./Images/logo.png";
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class App extends Component {
 
     console.log(this.state.movies);
     this.Search(this.state.search);
+    document.title = "Movie Search";
   }
 
   handleSearch(event) {
@@ -53,7 +55,7 @@ class App extends Component {
       <div className="App">
         <Row id="header" className="align-items-center">
           <Col className="no-padding" xs="auto">
-            <Image src="https://via.placeholder.com/100"></Image>
+            <Image id="logo" src={logo}></Image>
           </Col>
           <Col xs={8}>
             <h1>Movie Search</h1>
