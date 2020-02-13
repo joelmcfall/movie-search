@@ -3,7 +3,7 @@ import axios from "axios";
 
 import "./App.css";
 
-import { Row, Col, Image, Form, FormControl } from "react-bootstrap";
+import { Row, Col, Image, Form, FormControl, Container } from "react-bootstrap";
 
 import MovieRow from "./components/movieRow";
 import logo from "./Images/logo.png";
@@ -13,13 +13,11 @@ class App extends Component {
     super(props);
     this.state = { movies: [] };
 
-    console.log(this.state.movies);
     this.Search(this.state.search);
     document.title = "Movie Search";
   }
 
   handleSearch(event) {
-    console.log(event.target.value);
     const search = event.target.value;
     this.Search(search);
   }
@@ -38,7 +36,7 @@ class App extends Component {
 
         movies.forEach(movie => {
           const movieR = <MovieRow key={movie.id} movie={movie} />;
-          console.log(movieR.props.movie.poster_path);
+
           if (
             movieR.props.movie.overview !== "" &&
             movieR.props.movie.poster_path !== null
@@ -53,25 +51,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Row id="header" className="align-items-center">
-          <Col className="no-padding" xs="auto">
-            <Image id="logo" src={logo}></Image>
-          </Col>
-          <Col xs={8}>
-            <h1>Movie Search</h1>
-          </Col>
-        </Row>
-        <Row id="search">
-          <Col>
-            <Form>
+        <Container>
+          <Row id="header" className="align-items-center">
+            <Col xs="auto">
+              <Image id="logo" src={logo}></Image>
+            </Col>
+            <Col xs="auto">
+              <h1>Movie Search</h1>
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Form className="searchbar">
               <FormControl
                 type="text"
                 placeholder="Search"
                 onChange={this.handleSearch.bind(this)}
               ></FormControl>
             </Form>
-          </Col>
-        </Row>
+          </Row>
+        </Container>
         {this.state.movies}
       </div>
     );
