@@ -14,7 +14,7 @@ class MovieRow extends Component {
         <Row>
           <Col xs="auto">
             <Image
-              width="100"
+              className="movie-img"
               src={
                 "https://image.tmdb.org/t/p/w200/" +
                 this.props.movie.poster_path
